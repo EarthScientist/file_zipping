@@ -16,7 +16,7 @@ for model in models:
 		filelist=[]
 		for v in variables:
 			print 'creating archive'
-			zf = zipfile.ZipFile(model+"_"+v+"_"+str(year_groups[val][0])+"2.zip", mode='w', allowZip64=True)
+			zf = zipfile.ZipFile(model+"_"+v+"_"+str(year_groups[val][0])+".zip", mode='w', allowZip64=True)
 			for year in year_groups[val]:
 				for mon in months:
 					if v == "tas":
@@ -27,5 +27,4 @@ for model in models:
 						zf.write(os.path.join("/big_storage/malindgren/AIEM/ALFRESCO_AIEM_CLIP/ALFRESCO_Master_Dataset/ALFRESCO_Model_Input_Datasets/AK_CAN_Inputs/Climate",model,"sresa1b","pr","pr_total_mm_iem_ar4_"+model+"_sresa1b_"+mon+"_"+str(year)+".tif"), arcname="pr_total_mm_iem_ar4_"+model+"_sresa1b_"+mon+"_"+str(year)+".tif", compress_type=compression)
 			print 'closing'
 			zf.close()
-
-# tas_mean_C_iem_ar4_cccma_cgcm3_1_sresa1b_
+			

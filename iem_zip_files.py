@@ -22,7 +22,7 @@ for model in models:
 		filelist=[]
 		for v in variables:
 			print 'creating archive'
-			zf = zipfile.ZipFile(model+"_"+v+"_"+str(year_groups[val][0])+".zip", mode='w', allowZip64=True)
+			zf = zipfile.ZipFile(model+"_"+v+"_"+str(year_groups[val][0])+"_"+scenario+".zip", mode='w', allowZip64=True)
 			for year in year_groups[val]:
 				for mon in months:
 					# filelist.append(os.path.join("/big_storage/malindgren/AIEM/ALFRESCO_AIEM_CLIP/ALFRESCO_Master_Dataset/ALFRESCO_Model_Input_Datasets/AK_CAN_Inputs/Climate",model,"sresa1b","tas","tas_mean_C_iem_ar4_cccma_cgcm3_1_sresa1b_"+mon+"_"+year+".tif"))

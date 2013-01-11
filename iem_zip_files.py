@@ -6,11 +6,11 @@ compression = zipfile.ZIP_DEFLATED
 os.chdir("/big_storage/malindgren/AIEM/ZIP")
 
 # here lets create a list of the data we want in each of the zip groups
-year_groups = [range(1850,1900),range(1900,1950),range(1950,2001)]
+year_groups = [range(1960,2001)]
 variables = ["vap"]
 months = ["01","02","03","04","05","06","07","08","09","10","11","12"]
-models = ["cccma_cgcm3_1"] # "cccma_cgcm3_1"
-models2 = ["cccma"] 
+models = ["mpi_echam5"] # "cccma_cgcm3_1"
+models2 = ["echam5"] 
 scenario = "20c3m"
 metric = "hPa"
 count=0

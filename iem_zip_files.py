@@ -7,12 +7,12 @@ os.chdir("/big_storage/malindgren/AIEM/ZIP")
 
 # here lets create a list of the data we want in each of the zip groups
 year_groups = [range(2001,2050),range(2050,2101)]
-variables = ["rsds"]
+variables = ["vap"]
 months = ["01","02","03","04","05","06","07","08","09","10","11","12"]
 models = ["cccma_cgcm3_1","mpi_echam5"]
 models2 = ["cccma","echam5"]
 scenario = "sresa1b"
-metric = "wm-2"
+metric = "hPa"
 count=0
 for model in models:
 	print model

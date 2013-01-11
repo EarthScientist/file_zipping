@@ -9,8 +9,8 @@ os.chdir("/big_storage/malindgren/AIEM/ZIP")
 year_groups = [range(1850,1900),range(1900,1950),range(1950,2001)]
 variables = ["rsds"]
 months = ["01","02","03","04","05","06","07","08","09","10","11","12"]
-models = ["cccma_cgcm3_1","mpi_echam5"]
-models2 = ["cccma","echam5"]
+models = ["cccma_cgcm3_1"] # "cccma_cgcm3_1"
+models2 = ["cccma"] 
 scenario = "20c3m"
 metric = "wm-2"
 count=0

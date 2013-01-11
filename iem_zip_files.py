@@ -26,7 +26,7 @@ for model in models:
 			for year in year_groups[val]:
 				for mon in months:
 					# filelist.append(os.path.join("/big_storage/malindgren/AIEM/ALFRESCO_AIEM_CLIP/ALFRESCO_Master_Dataset/ALFRESCO_Model_Input_Datasets/AK_CAN_Inputs/Climate",model,"sresa1b","tas","tas_mean_C_iem_ar4_cccma_cgcm3_1_sresa1b_"+mon+"_"+year+".tif"))
-					zf.write(os.path.join("/big_storage/malindgren/AIEM/TEM_FINAL_Dec2012/AIEM_MASKED/",v.upper(),model2,model,scenario,v,v+"_mean_"+metric+"_iem_ar4_"+model+"_"+scenario+"_"+mon+"_"+str(year)+".tif"), arcname=v+"_mean_"+metric+"_iem_ar4_"+model+"_"+scenario+"_"+mon+"_"+str(year)+".tif",compress_type=compression)
+					zf.write(os.path.join("/big_storage/malindgren/AIEM/ALFRESCO_AIEM_CLIP/Climate/",model,scenario,v,v+"_mean_"+metric+"_iem_ar4_"+model+"_"+scenario+"_"+mon+"_"+str(year)+".tif"), arcname=v+"_mean_"+metric+"_iem_ar4_"+model+"_"+scenario+"_"+mon+"_"+str(year)+".tif",compress_type=compression)
 					
 			print 'closing'
 			zf.close()

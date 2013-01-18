@@ -6,7 +6,7 @@ compression = zipfile.ZIP_DEFLATED
 os.chdir("/big_storage/malindgren/AIEM/ZIP")
 
 # here lets create a list of the data we want in each of the zip groups
-year_groups = [range(2001,2050),range(2050,2101)]
+year_groups = [range(1901,2009)]
 variables = ["tas","pr"]
 months = ["01","02","03","04","05","06","07","08","09","10","11","12"]
 models = ["cru_TS31"]
@@ -21,9 +21,9 @@ for model in models:
 				for mon in months:
 					if v == "tas":
 						# filelist.append(os.path.join("/big_storage/malindgren/AIEM/ALFRESCO_AIEM_CLIP/ALFRESCO_Master_Dataset/ALFRESCO_Model_Input_Datasets/AK_CAN_Inputs/Climate",model,"sresa1b","tas","tas_mean_C_iem_ar4_cccma_cgcm3_1_sresa1b_"+mon+"_"+year+".tif"))
-						zf.write(os.path.join("/big_storage/malindgren/AIEM/ALFRESCO_AIEM_CLIP/ALFRESCO_Master_Dataset/ALFRESCO_Model_Input_Datasets/AK_CAN_Inputs/Climate",model,"historical","tas","tas_mean_C_iem_cru_"+model.upper()+"_sresa1b_"+mon+"_"+str(year)+".tif"), arcname="tas_mean_C_iem_cru_"+model.upper()+mon+"_"+str(year)+".tif",compress_type=compression)
+						zf.write(os.path.join("/big_storage/malindgren/AIEM/ALFRESCO_AIEM_CLIP/Climate",model,"historical","tas","tas_mean_C_iem_"+model+"_"+mon+"_"+str(year)+".tif"), arcname="tas_mean_C_iem_cru_"+model.upper()+mon+"_"+str(year)+".tif",compress_type=compression)
 					else:
 						# filelist.append(os.path.join("/big_storage/malindgren/AIEM/ALFRESCO_AIEM_CLIP/ALFRESCO_Master_Dataset/ALFRESCO_Model_Input_Datasets/AK_CAN_Inputs/Climate",model,"sresa1b","pr","pr_total_mm_iem_ar4_cccma_cgcm3_1_sresa1b_"+mon+"_"+year+".tif"))
-						zf.write(os.path.join("/big_storage/malindgren/AIEM/ALFRESCO_AIEM_CLIP/ALFRESCO_Master_Dataset/ALFRESCO_Model_Input_Datasets/AK_CAN_Inputs/Climate",model,"historical","pr","pr_total_mm_iem_cru_"+model.upper()+"_sresa1b_"+mon+"_"+str(year)+".tif"), arcname="pr_total_mm_iem_cru_"+model.upper()+mon+"_"+str(year)+".tif", compress_type=compression)
+						zf.write(os.path.join("/big_storage/malindgren/AIEM/ALFRESCO_AIEM_CLIP/Climate",model,"historical","pr","pr_total_mm_iem_"+model+"_"+mon+"_"+str(year)+".tif"), arcname="pr_total_mm_iem_cru_"+model.upper()+mon+"_"+str(year)+".tif", compress_type=compression)
 			print 'closing'
 			zf.close()

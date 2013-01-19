@@ -1,4 +1,3 @@
-from zipfile_infolist import print_info
 import zipfile, os, sys
 
 compression = zipfile.ZIP_DEFLATED
@@ -6,7 +5,7 @@ compression = zipfile.ZIP_DEFLATED
 os.chdir("/big_storage/malindgren/AIEM/ZIP")
 
 # here lets create a list of the data we want in each of the zip groups
-year_groups = [range(1901,2009)]
+year_groups = [range(1901,2010)]
 variables = ["tas","pr"]
 months = ["01","02","03","04","05","06","07","08","09","10","11","12"]
 models = ["cru_TS31"]
